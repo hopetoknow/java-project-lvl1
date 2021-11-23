@@ -4,17 +4,22 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Even {
+    private static final int WINNING_SCORE = 3;
+
+    private static final int UPPER_BOUND = 100;
+
     public static void launchGame() {
-        System.out.println("Answer 'yes' if a number is even otherwise answer 'no'.");
         int counter = 0;
         int randomNumber;
         String userAnswer;
+        Scanner sc = new Scanner(System.in);
         Random random = new Random();
-        while (counter != 3) {
-            System.out.printf("""                
+        System.out.println("Answer 'yes' if a number is even otherwise answer 'no'.");
+        while (counter != WINNING_SCORE) {
+            randomNumber = random.nextInt(UPPER_BOUND);
+            System.out.printf("""
                 Question: %d
-                Your answer:\s""", randomNumber = random.nextInt(100));
-            Scanner sc = new Scanner(System.in);
+                Your answer:\s""", randomNumber);
             userAnswer = sc.nextLine();
             if (isAnswerCorrect(randomNumber, userAnswer)) {
                 System.out.println("Correct!");
@@ -24,8 +29,8 @@ public class Even {
                 break;
             }
         }
-        if (counter == 3) {
-            System.out.printf("Congratulations, %s!", Greet.USERNAME);
+        if (counter == WINNING_SCORE) {
+            System.out.printf("Congratulations, %s!", Greet.getUsername());
         }
     }
 
@@ -36,9 +41,9 @@ public class Even {
             wrongAnswer = "no";
             correctAnswer = "yes";
         }
-        System.out.printf("""                
+        System.out.printf("""
                 %s is the wrong answer ;(. The correct answer was %s.
-                Let's try again, %s!""", wrongAnswer, correctAnswer, Greet.USERNAME);
+                Let's try again, %s!""", wrongAnswer, correctAnswer, Greet.getUsername());
     }
 
     private static boolean isAnswerCorrect(int number, String userAnswer) {
