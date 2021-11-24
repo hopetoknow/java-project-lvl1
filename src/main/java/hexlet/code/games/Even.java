@@ -3,12 +3,12 @@ package hexlet.code.games;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Even {
+public final class Even {
     private static final int WINNING_SCORE = 3;
 
     private static final int UPPER_BOUND = 100;
 
-    public static void launchGame() {
+    public void launchGame(String username) {
         int counter = 0;
         int randomNumber;
         String userAnswer;
@@ -25,33 +25,42 @@ public class Even {
                 System.out.println("Correct!");
                 counter++;
             } else {
-                printSadMessage(randomNumber, userAnswer);
+                printSadMessage(randomNumber, username, userAnswer);
                 break;
             }
         }
         if (counter == WINNING_SCORE) {
-            System.out.printf("Congratulations, %s!", Greet.getUsername());
+            System.out.printf("Congratulations, %s!", username);
         }
     }
 
-    private static void printSadMessage(int number, String userAnswer) {
-        String wrongAnswer = "yes";
-        String correctAnswer = "no";
-        if (isEven(number) && "no".equals(userAnswer)) {
-            wrongAnswer = "no";
+    private void printSadMessage(int number, String username, String userAnswer) {
+        String wrongAnswer = null;
+        String correctAnswer = null;
+        if (isEven(number)) {
             correctAnswer = "yes";
+            wrongAnswer = "no";
+            if (!"no".equals(userAnswer)) {
+                wrongAnswer = userAnswer;
+            }
+        } else if (!isEven(number)) {
+            correctAnswer = "no";
+            wrongAnswer = "yes";
+            if (!"yes".equals(userAnswer)) {
+                wrongAnswer = userAnswer;
+            }
         }
         System.out.printf("""
                 %s is the wrong answer ;(. The correct answer was %s.
-                Let's try again, %s!""", wrongAnswer, correctAnswer, Greet.getUsername());
+                Let's try again, %s!""", wrongAnswer, correctAnswer, username);
     }
 
-    private static boolean isAnswerCorrect(int number, String userAnswer) {
+    private boolean isAnswerCorrect(int number, String userAnswer) {
         return (isEven(number) && "yes".equals(userAnswer)) || (!isEven(number) && "no".equals(userAnswer));
     }
 
 
-    private static boolean isEven(int number) {
+    private boolean isEven(int number) {
         return number % 2 == 0;
     }
 }

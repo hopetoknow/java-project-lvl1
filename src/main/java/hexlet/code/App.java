@@ -17,11 +17,11 @@ public class App {
         int gameNumber = sc.nextInt();
         switch (gameNumber) {
             case 1:
-                Greet.greetUser();
+                new Greet().greetUser();
                 break;
             case 2:
-                Greet.greetUser();
-                Even.launchGame();
+                Even even = new Even();
+                even.launchGame(new Greet().greetUser());
                 break;
             default:
                 break;
