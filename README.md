@@ -4,4 +4,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/5985cc2834edc4acb645/maintainability)](https://codeclimate.com/github/hopetoknow/java-project-lvl1/maintainability)
 
 ## Application launch example:
-[Asciinema](https://asciinema.org/a/l0kSm3CP7otIgkaRRNa3W8grd)
+[Game 2](https://asciinema.org/a/l0kSm3CP7otIgkaRRNa3W8grd)
