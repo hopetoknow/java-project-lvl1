@@ -30,7 +30,7 @@ public final class Even {
             }
         }
         if (counter == WINNING_SCORE) {
-            System.out.printf("Congratulations, %s!", username);
+            System.out.printf("Congratulations, %s!\n", username);
         }
     }
 
@@ -52,7 +52,8 @@ public final class Even {
         }
         System.out.printf("""
                 %s is the wrong answer ;(. The correct answer was %s.
-                Let's try again, %s!""", wrongAnswer, correctAnswer, username);
+                Let's try again, %s!
+                """, wrongAnswer, correctAnswer, username);
     }
 
     private boolean isAnswerCorrect(int number, String userAnswer) {
