@@ -7,3 +7,5 @@
 [Game 2](https://asciinema.org/a/l0kSm3CP7otIgkaRRNa3W8grd)
 
 [Game 3](https://asciinema.org/a/rQS91tlvE7LQ7PujA44UQBeSq)
+
+[Game 4](https://asciinema.org/a/kVXgSCOMYOnLTdSlHcxne1Yok)
