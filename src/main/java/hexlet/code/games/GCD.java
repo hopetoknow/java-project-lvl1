@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-public class GCD extends Engine {
+public final class GCD extends Engine {
 
     @Override
     protected void printHowToPlayMessage() {
