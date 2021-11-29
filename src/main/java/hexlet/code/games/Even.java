@@ -6,8 +6,6 @@ import java.util.Random;
 
 
 public final class Even extends Engine {
-    private static final int UPPER_BOUND = 100;
-
     @Override
     protected void printHowToPlayMessage() {
         System.out.println("Answer 'yes' if a number is even otherwise answer 'no'.");

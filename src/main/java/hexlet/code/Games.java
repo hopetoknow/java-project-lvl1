@@ -1,5 +1,5 @@
 package hexlet.code;
 
 public enum Games {
-    GREET, EVEN, CALC
+    GREET, EVEN, CALC, GCD
 }

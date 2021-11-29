@@ -5,6 +5,8 @@ import java.util.Scanner;
 public abstract class Engine {
     protected static final int WINNING_SCORE = 3;
 
+    protected static final int UPPER_BOUND = 100;
+
     private String username;
 
     protected abstract void printHowToPlayMessage();
