@@ -4,6 +4,7 @@ import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Greet;
+import hexlet.code.games.Progression;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -16,6 +17,7 @@ public class App {
                 2 - Even
                 3 - Calc
                 4 - GCD
+                5 - Progression
                 0 - Exit
                 Your choice:\s""");
         Scanner sc = new Scanner(System.in);
@@ -34,6 +36,9 @@ public class App {
                     break;
                 case GCD:
                     new GCD().launchGame();
+                    break;
+                case PROGRESSION:
+                    new Progression().launchGame();
                     break;
                 default:
                     break;

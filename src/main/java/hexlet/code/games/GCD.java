@@ -5,7 +5,6 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public final class GCD extends Engine {
-
     @Override
     protected void printHowToPlayMessage() {
         System.out.println("Find the greatest common divisor of given numbers.");
