@@ -9,3 +9,5 @@
 [Game 3](https://asciinema.org/a/rQS91tlvE7LQ7PujA44UQBeSq)
 
 [Game 4](https://asciinema.org/a/kVXgSCOMYOnLTdSlHcxne1Yok)
+
+[Game 5](https://asciinema.org/a/1pewjFY58lRG4IkP9R4Nblff8)
