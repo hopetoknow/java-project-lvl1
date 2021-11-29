@@ -22,3 +22,7 @@ repositories {
 run {
     standardInput = System.in
 }
+
+checkstyle {
+    toolVersion = '9.0'
+}
