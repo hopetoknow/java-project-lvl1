@@ -3,9 +3,13 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public final class Greet extends Engine {
-
     @Override
     public void launchGame() {
+        greetUser();
+    }
+
+    @Override
+    protected void printHowToPlayMessage() {
 
     }
 

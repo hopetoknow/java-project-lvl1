@@ -7,13 +7,31 @@ public abstract class Engine {
 
     private String username;
 
-    public abstract void launchGame();
+    protected abstract void printHowToPlayMessage();
 
     protected abstract String getQuestion();
 
     protected abstract String getCorrectAnswer(String question);
 
-    protected final void showGameProgress() {
+    /**
+     * Do not override if you're not sure what you're doing.
+     */
+    protected void launchGame() {
+        greetUser();
+        printHowToPlayMessage();
+        showGameProgress();
+    }
+
+    protected final void greetUser() {
+        System.out.print("""
+                \nWelcome to the Brain Games!
+                May I have your name?\s""");
+        Scanner sc = new Scanner(System.in);
+        username = sc.nextLine();
+        System.out.printf("Hello, %s!\n", username);
+    }
+
+    private void showGameProgress() {
         int counter = 0;
         String userAnswer;
         String rightAnswer;
@@ -36,33 +54,20 @@ public abstract class Engine {
         printWinningMessage(counter);
     }
 
-    protected final boolean isAnswerCorrect(String question, String userAnswer) {
+    private boolean isAnswerCorrect(String question, String userAnswer) {
         return getCorrectAnswer(question).equals(userAnswer);
     }
 
-    protected final void printSadMessage(String wrongAnswer, String rightAnswer) {
+    private void printSadMessage(String wrongAnswer, String rightAnswer) {
         System.out.printf("""
                 '%s' is the wrong answer ;(. The correct answer was '%s'.
                 Let's try again, %s!
-                """, wrongAnswer, rightAnswer, getUsername());
+                """, wrongAnswer, rightAnswer, username);
     }
 
-    protected final void printWinningMessage(int counter) {
+    private void printWinningMessage(int counter) {
         if (counter == WINNING_SCORE) {
-            System.out.printf("Congratulations, %s!\n", getUsername());
+            System.out.printf("Congratulations, %s!\n", username);
         }
-    }
-
-    protected final void greetUser() {
-        System.out.print("""
-                \nWelcome to the Brain Games!
-                May I have your name?\s""");
-        Scanner sc = new Scanner(System.in);
-        username = sc.nextLine();
-        System.out.printf("Hello, %s!\n", username);
-    }
-
-    protected final String getUsername() {
-        return username;
     }
 }

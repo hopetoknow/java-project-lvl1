@@ -4,6 +4,7 @@ import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.Greet;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -16,24 +17,24 @@ public class App {
                 0 - Exit
                 Your choice:\s""");
         Scanner sc = new Scanner(System.in);
-        int gameNumber = sc.nextInt();
         try {
+            int gameNumber = sc.nextInt();
             Games game = Games.values()[gameNumber - 1];
             switch (game) {
                 case GREET:
-                    new Greet().greetUser();
+                    new Greet().launchGame();
                     break;
                 case EVEN:
                     new Even().launchGame();
                     break;
                 case CALC:
-                    new Calc();
+                    new Calc().launchGame();
                     break;
                 default:
                     break;
             }
-        } catch (IndexOutOfBoundsException e) {
-
+        } catch (IndexOutOfBoundsException  | InputMismatchException e) {
+            System.out.println("Pay attention, all right? Check what you typed.");
         }
     }
 }
