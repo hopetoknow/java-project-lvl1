@@ -30,26 +30,14 @@ public class App {
             }
             Games game = Games.values()[gameNumber - 1];
             switch (game) {
-                case GREET:
-                    new Greet().launchGame();
-                    break;
-                case EVEN:
-                    new Even().launchGame();
-                    break;
-                case CALC:
-                    new Calc().launchGame();
-                    break;
-                case GCD:
-                    new GCD().launchGame();
-                    break;
-                case PROGRESSION:
-                    new Progression().launchGame();
-                    break;
-                case PRIME:
-                    new Prime().launchGame();
-                    break;
-                default:
-                    break;
+                case GREET -> new Greet().launchGame();
+                case EVEN -> new Even().launchGame();
+                case CALC -> new Calc().launchGame();
+                case GCD -> new GCD().launchGame();
+                case PROGRESSION -> new Progression().launchGame();
+                case PRIME -> new Prime().launchGame();
+                default -> {
+                }
             }
         } catch (IndexOutOfBoundsException  | InputMismatchException e) {
             System.out.println("Pay attention, all right? Check what you typed.");
