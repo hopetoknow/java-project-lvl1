@@ -25,6 +25,9 @@ public class App {
         Scanner sc = new Scanner(System.in);
         try {
             int gameNumber = sc.nextInt();
+            if (gameNumber == 0) {
+                System.exit(0);
+            }
             Games game = Games.values()[gameNumber - 1];
             switch (game) {
                 case GREET:
