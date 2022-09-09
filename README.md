@@ -13,8 +13,7 @@ This project is written with a focus on object-oriented programming. All games h
 [![Actions Status](https://github.com/hopetoknow/java-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/hopetoknow/java-project-lvl1/actions)
 
 ### GitHub Actions workflow status badge
-![Java CI](https://github.com/hopetoknow/java-project-lvl1/actions/workflows/github-actions.yml/badge.svg)
-
+[![Java CI](https://github.com/hopetoknow/java-project-lvl1/actions/workflows/github-actions.yml/badge.svg?branch=main)](https://github.com/hopetoknow/java-project-lvl1/actions/workflows/github-actions.yml)
 ### Maintainability badge from Code Climate
 [![Maintainability](https://api.codeclimate.com/v1/badges/5985cc2834edc4acb645/maintainability)](https://codeclimate.com/github/hopetoknow/java-project-lvl1/maintainability)
 
